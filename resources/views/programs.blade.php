@@ -19,8 +19,8 @@
                             - (varhany)
                     @endforeach
                 </h3>
-                <a>Kostel Krista dobrého Pastýře, Husova 1, Plzeň</a>
-                <a></a>
+                <a>{{ $program->content }}</a>
+                <a href="{{ route('program', ['program' => $program]) }}">15. června 2026 od 16:00</a>
                 <br>
             @endforeach
         </div>

@@ -766,7 +766,73 @@ html, body {
   justify-content:center;
   flex-wrap:wrap;
 }
-.box{
+/*---STRÁNKA UMĚLCŮ---*/
+.artist-page__img{
+  padding: 26px 26px 8px;
+  display:flex;
+  justify-content:center;
+}
+.artist-page__img img{
+  width: 230px;
+  height: 230px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(215, 199, 163);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.50), inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.artist-page__meta{
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.artist-page__name{
+  margin-top: 6px;
+  font-size: 1.65rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: rgba(231,210,159,0.98);
+}
+.artist-page__name a{
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(215,199,163,0.55);
+  padding-bottom: 2px;
+  text-align: center;
+}
+.artist-page__name a:hover{
+  border-bottom-color: rgba(215,199,163,0.85);
+  text-align: center;
+}
+
+.back{
+text-align: center;
+w;
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration:none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    color: #140a1b;
+  background: linear-gradient(to bottom, rgba(231,210,159,0.98), rgba(215,199,163,0.90));
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 860px){
+  .artist-page__img{justify-items: center; }
+
+}
+
+  .box{
   display:inline-flex;
   align-items:center;
   gap: 10px;
@@ -802,3 +868,4 @@ html, body {
   .artists__title{text-align:center;}
   .artist-card__body{text-align:center;}
 }
+
