@@ -17,6 +17,7 @@ class ProgramForm
                 TextInput::make('title')
                     ->required(),
                 Select::make('artists')
+                    ->relationship('artists', 'name')
                     ->options(Artist::query()->pluck('name', 'id'))
                     ->searchable()
                     ->multiple(),

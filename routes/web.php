@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Models\{News, Artist, Program};
 
 Route::get('/', function () {
-    return view('homepage');
+    $programs = Program::query()->limit(3)->get();
+
+    return view('homepage', ['programs' => $programs]);
 })->name('home');
 
 Route::get('/aktuality', function () {
@@ -30,3 +32,7 @@ Route::get('/program', function () {
 Route::get('/program/{program}', function (Program $program) {
     return view('program', ['program' => $program]);
 })->name('program');
+
+Route::get('/o-festivalu', function () {
+    return view('about');
+})->name('about');
